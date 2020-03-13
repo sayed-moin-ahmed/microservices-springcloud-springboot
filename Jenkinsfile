@@ -7,4 +7,18 @@ pipeline {
             }
         }
     }
+    // stages {
+    //     stage('test') {
+    //         steps {
+    //             sh 'mvn --version'
+    //         }
+    //     }
+    // }
+    stages {
+        stage('deploy') {
+            steps {
+                sh 'mvn --version'
+            }
+        }
+    }
 }
