@@ -6,19 +6,17 @@ pipeline {
                 sh 'mvn --version'
             }
         }
-    }
-    // stages {
-    //     stage('test') {
-    //         steps {
-    //             sh 'mvn --version'
-    //         }
-    //     }
-    // }
-    stages {
+        // stage('test') {
+        //     steps {
+        //         sh 'mvn --version'
+        //     }
+        // }
         stage('deploy') {
             steps {
                 sh 'mvn --version'
             }
         }
     }
+
+        
 }
