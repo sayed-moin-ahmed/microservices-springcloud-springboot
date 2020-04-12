@@ -1,0 +1,6 @@
+logging:
+  level:
+    root: INFO
+    com.ghifar: DEBUG
+server:
+  port: 7003

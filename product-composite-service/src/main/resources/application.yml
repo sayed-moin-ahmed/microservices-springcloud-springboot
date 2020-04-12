@@ -2,6 +2,7 @@ server:
   port: 7000
 
 
+
 app:
   product-service:
     host: localhost
@@ -9,6 +10,9 @@ app:
   recommendation-service:
     host: localhost
     port: 7002
-  review-service:
+  product-review-service:
     host: localhost
     port: 7003
+logging:
+  level:
+    com.ghifar: DEBUG
