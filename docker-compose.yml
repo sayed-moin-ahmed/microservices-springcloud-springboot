@@ -1,0 +1,30 @@
+version: '2.1'
+# after this coba versi 3. environmentnya work ga?
+# coba compatible juga apakah mem limit kedetek? walaupun ga pake swarm atau kubernetes(deploy blabla)
+# coba hostnya ganti ganti, ngaruh ga ke application.yml composite hostnya?
+services:
+  product:
+    build: product-service
+    mem_limit: 350m
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  recommendation:
+    build: recommendation-service
+    mem_limit: 350m
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  review:
+    build: review-service
+    mem_limit: 350m
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  product-composite:
+    build: product-composite-service
+    mem_limit: 350m
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker

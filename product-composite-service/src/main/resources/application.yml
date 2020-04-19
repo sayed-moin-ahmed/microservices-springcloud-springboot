@@ -1,8 +1,8 @@
+#Local
 server:
   port: 7000
 
-
-
+##custom
 app:
   product-service:
     host: localhost
@@ -16,3 +16,28 @@ app:
 logging:
   level:
     com.ghifar: DEBUG
+
+#docker nih
+#active your argument with -Dspring.profiles.active=docker (jvm argument) OR
+#active your argument with SPRING_PROFILES_ACTIVE=DOCKER (docker -e argument)
+---
+
+spring:
+  profiles: docker
+app:
+  product-service:
+#    host harus sama dengan nama service yang di set di docker-compose.yml
+    host: product
+    port: 8080
+  recommendation-service:
+    host: recommendation
+    port: 8080
+  product-review-service:
+    host: review
+    port: 8080
+logging:
+  level:
+    com.ghifar: DEBUG
+
+server:
+  port: 8080

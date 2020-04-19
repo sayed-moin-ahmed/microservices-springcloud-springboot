@@ -1,7 +1,17 @@
+logging:
+  level:
+    root: INFO
+    com.ghifar: DEBUG
+server:
+  port: 7001
 
-    logging:
-      level:
-        root: INFO
-        com.ghifar: DEBUG
-    server:
-      port: 7001
+---
+#active your argument with -Dspring.profiles.active=docker (jvm argument) OR
+#active your argument with SPRING_PROFILES_ACTIVE=DOCKER (docker -e argument)
+spring:
+  profiles: docker
+server:
+  port: 8080
+logging:
+  level:
+    root: INFO

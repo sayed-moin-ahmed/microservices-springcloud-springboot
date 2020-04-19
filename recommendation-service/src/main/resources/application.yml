@@ -5,3 +5,13 @@ logging:
     com.ghifar: DEBUG
 server:
   port: 7002
+
+---
+
+spring:
+  profiles: docker
+server:
+  port: 8080
+logging:
+  level:
+    root: INFO
