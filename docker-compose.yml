@@ -1,7 +1,7 @@
 version: '2.1'
 # after this coba versi 3. environmentnya work ga?
-# coba compatible juga apakah mem limit kedetek? walaupun ga pake swarm atau kubernetes(deploy blabla)
-# coba hostnya ganti ganti, ngaruh ga ke application.yml composite hostnya?
+# coba compatible versi yang otomatis detek config sesuai versi juga apakah mem limit kedetek? walaupun ga pake swarm atau kubernetes(deploy blabla)
+# coba hostnya ganti ganti, ngaruh ga ke application.yml composite hostnya? YES
 services:
   product:
     build: product-service
